@@ -8,6 +8,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  flutter_secure_storage: ^8.0.0
   flutter:
     sdk: flutter
 
@@ -17,4 +18,3 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
-  build_runner: ^2.4.5
