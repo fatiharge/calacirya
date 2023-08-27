@@ -135,6 +135,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.2.0"
+  mazarbul:
+    dependency: "direct main"
+    description:
+      name: mazarbul
+      sha256: e3302649834ea85cf4863b732c01bdb4acf2b1db7b229a9ca3be4a12098d5552
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.9"
   meta:
     dependency: transitive
     description:

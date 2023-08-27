@@ -1,14 +1,14 @@
 name: calacirya
 description: A new Flutter package project.
 version: 0.0.1
-homepage:
+homepage: https://github.com/fatiharge/calacirya.git
 
 environment:
   sdk: '>=3.0.3 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
-  shared_preferences:  ^2.2.0
+  mazarbul: ^1.0.9
   flutter:
     sdk: flutter
 
