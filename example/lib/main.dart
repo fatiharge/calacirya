@@ -1,5 +1,5 @@
 import 'package:calacirya/calacirya.dart';
-import 'package:calacirya/view/log_in/view/calacirya_log_in_view.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const CalaciryaLoginView(),
+      home: const SizedBox(),
     );
   }
 }
@@ -51,6 +51,8 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
+
+
       _counter++;
     });
   }
