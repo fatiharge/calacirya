@@ -1,6 +1,5 @@
 import 'package:calacirya/calacirya.dart';
 import 'package:flutter/material.dart';
-import 'package:mazarbul/mazarbul.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,6 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,27 +32,15 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-enum fa { sayi }
-
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter = Mazarbul.instance.getString(fa.sayi) == "80"
-          ? _counter + 80
-          : _counter++;
-    });
-  }
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Mazarbul().getSharedInstance().then((value) {
-      Calacirya.instance.initCalacirya(sharedInstance: value);
-      Mazarbul.withSharedPreferences(value);
-    });
+
+    Calacirya().initCalacirya(autoLogin: false, welcomeStatus: true).then((value) => Calacirya.instance.start(context));
   }
 
   @override
@@ -75,11 +63,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }

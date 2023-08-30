@@ -1,7 +1,9 @@
 library calacirya;
 
+import 'package:calacirya/src/page/welcome_example/welcome_example.dart';
 import 'package:calacirya/src/calacirya_init_exception.dart';
 import 'package:calacirya/src/shared_keys.dart';
+
 import 'package:flutter/material.dart';
 import 'package:mazarbul/mazarbul.dart';
 
@@ -21,9 +23,15 @@ class Calacirya {
 
   Calacirya._internal();
 
-  Future<void> initCalacirya({var sharedInstance}) async {
+  Future<void> initCalacirya(
+      {var sharedInstance,
+      bool welcomeStatus = false,
+      bool autoLogin = false,
+      BaseWelcomeWidgetModel? baseWelcomeWidgetModel}) async {
     try {
       _mazarbul = Mazarbul.withSharedPreferences(sharedInstance ?? await Mazarbul().getSharedInstance());
+      _autoLogin = autoLogin;
+      _welcomeStatus = welcomeStatus;
       sharedInit();
       status = true;
     } on Exception {
@@ -32,9 +40,8 @@ class Calacirya {
   }
 
   void sharedInit() {
-    _welcomeStatus = _mazarbul?.getBool(SharedKeys.welcomeStatus) ?? false;
+    _mazarbul?.saveBool(SharedKeys.welcomeIsOpened, false);
     _welcomeIsOpened = _mazarbul?.getBool(SharedKeys.welcomeIsOpened) ?? false;
-    _autoLogin = _mazarbul?.getBool(SharedKeys.autoLogin) ?? false;
     _firstLogin = _mazarbul?.getBool(SharedKeys.firstLogin) ?? false;
   }
 
@@ -62,11 +69,11 @@ class Calacirya {
 
   void pushWelcome(BuildContext context) {
     Navigator.of(context).pushReplacement(MaterialPageRoute(
-      builder: (context) => baseWelcomeWidgetModel ?? Eroor(),
+      builder: (context) => baseWelcomeWidgetModel ?? const WelcomeExample(),
     ));
   }
 
-  void comlateWelcome(BuildContext context) {
+  void completeWelcome(BuildContext context) {
     _mazarbul?.saveBool(SharedKeys.welcomeIsOpened, true);
     //push login
   }
@@ -79,6 +86,6 @@ class Eroor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Text("baurad");
   }
 }
