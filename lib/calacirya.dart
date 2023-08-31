@@ -7,7 +7,7 @@ import 'package:calacirya/src/shared_keys.dart';
 import 'package:flutter/material.dart';
 import 'package:mazarbul/mazarbul.dart';
 
-import 'src/base_welcome_widget_model.dart';
+import 'src/base_welcome_page_model.dart';
 
 class Calacirya {
   static final Calacirya _calacirya = Calacirya._internal();
@@ -17,7 +17,7 @@ class Calacirya {
   bool _welcomeIsOpened = false;
   bool _autoLogin = false;
   bool _firstLogin = false;
-  BaseWelcomeWidgetModel? baseWelcomeWidgetModel;
+  BaseWelcomePageModel? baseWelcomeWidgetModel;
 
   factory Calacirya() => _calacirya;
 
@@ -27,7 +27,7 @@ class Calacirya {
       {var sharedInstance,
       bool welcomeStatus = false,
       bool autoLogin = false,
-      BaseWelcomeWidgetModel? baseWelcomeWidgetModel}) async {
+      BaseWelcomePageModel? baseWelcomeWidgetModel}) async {
     try {
       _mazarbul = Mazarbul.withSharedPreferences(sharedInstance ?? await Mazarbul().getSharedInstance());
       _autoLogin = autoLogin;
@@ -77,6 +77,8 @@ class Calacirya {
     _mazarbul?.saveBool(SharedKeys.welcomeIsOpened, true);
     //push login
   }
+
+
 
   static Calacirya get instance => _calacirya.status ? _calacirya : throw CalaciryaInitException();
 }

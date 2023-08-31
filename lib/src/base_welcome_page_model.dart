@@ -2,11 +2,11 @@ import 'package:calacirya/calacirya.dart';
 import 'package:flutter/material.dart';
 
 /// Abstract base class for welcome widget models.
-abstract class BaseWelcomeWidgetModel extends StatefulWidget {
-  /// Creates a new instance of [BaseWelcomeWidgetModel].
+abstract class BaseWelcomePageModel extends StatefulWidget {
+  /// Creates a new instance of [BaseWelcomePageModel].
   ///
   /// [key] parameter is inherited from [StatefulWidget] class.
-  const BaseWelcomeWidgetModel({Key? key}) : super(key: key);
+  const BaseWelcomePageModel({Key? key}) : super(key: key);
 
   /// Completes the welcome process.
   ///
