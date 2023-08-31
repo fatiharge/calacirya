@@ -1,11 +1,11 @@
-import 'package:calacirya/src/base_welcome_widget_model.dart';
+import 'package:calacirya/src/base_welcome_page_model.dart';
 import 'package:calacirya/src/enum/asset_type.dart';
 import 'package:calacirya/src/page/welcome_example/model/welcome_page_data.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 /// This class manages an example application of welcome screens using Calacirya's base widget model.
-class WelcomeExample extends BaseWelcomeWidgetModel {
+class WelcomeExample extends BaseWelcomePageModel {
   /// List of data containing images and text for welcome screens.
   final List<WelcomePageData>? list;
 
