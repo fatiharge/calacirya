@@ -1,5 +1,15 @@
-import 'package:calacirya/src/base_welcome_page_model.dart';
-import 'package:calacirya/src/enum/asset_type.dart';
+/*
+ * Copyright (c) 2023 fatiharge
+ *
+ * You are free to copy, modify, and redistribute this software, but you must abide by these terms when distributing any derivative works under the project's license.
+ *
+ *  Author : Fatih Çetin
+ *  Mail   : fatih@fatiharge.com
+ *
+ */
+
+import 'package:calacirya/src/base_models/base_welcome_page_model.dart';
+import 'package:calacirya/src/enums/asset_type.dart';
 import 'package:calacirya/src/page/welcome_example/model/welcome_page_data.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -19,27 +29,80 @@ class WelcomeExample extends BaseWelcomePageModel {
 }
 
 class _WelcomeExampleState extends State<WelcomeExample> {
+// List of data containing images and text for welcome screens.
   late List<WelcomePageData> _list;
+
+// Flex value for the image section of the page.
   final int imageFlex = 3;
+
+// Flex value for the text section of the page.
   final int textFlex = 2;
+
+// Flex value for the button section of the page.
   final int buttonFlex = 2;
+
+// Controller for managing the PageView.
+  late PageController _pageController;
+
+// The index of the currently displayed page.
+  int _currentPage = 0;
 
   @override
   void initState() {
     super.initState();
+    _pageController = PageController(initialPage: 0);
+
+    // Listen to page changes and update _currentPage
+    _pageController.addListener(_pageChanged);
     _list = widget.list ?? WelcomePageData.dummyList;
+  }
+
+  void _pageChanged() {
+    setState(() {
+      _currentPage = _pageController.page?.round() ?? 0;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: PageView.builder(
-          itemCount: _list.length,
-          itemBuilder: (context, index) {
-            WelcomePageData item = _list[index];
-            return _buildPage(index, item);
-          },
+        child: Column(
+          children: [
+            Expanded(
+              child: PageView.builder(
+                controller: _pageController,
+                itemCount: _list.length,
+                itemBuilder: (context, index) {
+                  WelcomePageData item = _list[index];
+                  return _buildPage(index, item);
+                },
+              ),
+            ),
+            _buildPageIndicators(),
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// Returns a Row widget containing the page indicators.
+  Widget _buildPageIndicators() {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: List.generate(
+          _list.length,
+          (index) => Container(
+            width: 8.0,
+            height: 8.0,
+            margin: const EdgeInsets.symmetric(horizontal: 4.0),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: index == _currentPage ? Colors.blue : Colors.grey,
+            ),
+          ),
         ),
       ),
     );

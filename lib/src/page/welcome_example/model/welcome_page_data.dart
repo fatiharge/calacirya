@@ -1,8 +1,18 @@
-import 'package:calacirya/src/enum/image_path.dart';
-import 'package:calacirya/src/enum/asset_type.dart';
-import 'package:calacirya/src/enum/lottie_path.dart';
-import 'package:calacirya/src/extension/image_path_extension.dart';
-import 'package:calacirya/src/extension/lottie_path_extension.dart';
+/*
+ * Copyright (c) 2023 fatiharge
+ *
+ * You are free to copy, modify, and redistribute this software, but you must abide by these terms when distributing any derivative works under the project's license.
+ *
+ *  Author : Fatih Çetin
+ *  Mail   : fatih@fatiharge.com
+ *
+ */
+
+import 'package:calacirya/src/enums/image_path.dart';
+import 'package:calacirya/src/enums/asset_type.dart';
+import 'package:calacirya/src/enums/lottie_path.dart';
+import 'package:calacirya/src/extensions/image_path_extension.dart';
+import 'package:calacirya/src/extensions/lottie_path_extension.dart';
 
 /// Represents data for a welcome page in the application.
 class WelcomePageData {
