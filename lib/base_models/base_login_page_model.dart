@@ -9,7 +9,7 @@
  */
 
 import 'package:calacirya/calacirya.dart';
-import 'package:calacirya/src/exceptions/login_exception.dart';
+import 'package:calacirya/exceptions/login_exception.dart';
 import 'package:flutter/material.dart';
 
 abstract class BaseLoginPageModel extends StatefulWidget {
@@ -30,7 +30,7 @@ abstract class BaseLoginPageModel extends StatefulWidget {
   }
 
   void _alert(LoginException loginException, BuildContext context) {
-    showDialog(
+    showAdaptiveDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
@@ -41,7 +41,7 @@ abstract class BaseLoginPageModel extends StatefulWidget {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: const Text('Okey'),
+              child: const Text('OK'),
             ),
           ],
         );

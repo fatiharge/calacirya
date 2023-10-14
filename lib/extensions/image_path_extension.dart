@@ -8,7 +8,7 @@
  *
  */
 
-import 'package:calacirya/src/enums/image_path.dart';
+import 'package:calacirya/enums/image_path.dart';
 
 /// Extension to convert [ImagePath] enum values to image paths.
 extension PngPathExtension on ImagePath {

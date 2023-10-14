@@ -8,11 +8,11 @@
  *
  */
 
-import 'package:calacirya/src/enums/image_path.dart';
-import 'package:calacirya/src/enums/asset_type.dart';
-import 'package:calacirya/src/enums/lottie_path.dart';
-import 'package:calacirya/src/extensions/image_path_extension.dart';
-import 'package:calacirya/src/extensions/lottie_path_extension.dart';
+import 'package:calacirya/enums/asset_type.dart';
+import 'package:calacirya/enums/image_path.dart';
+import 'package:calacirya/enums/lottie_path.dart';
+import 'package:calacirya/extensions/image_path_extension.dart';
+import 'package:calacirya/extensions/lottie_path_extension.dart';
 
 /// Represents data for a welcome page in the application.
 class WelcomePageData {

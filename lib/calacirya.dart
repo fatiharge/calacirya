@@ -10,14 +10,14 @@
 
 library calacirya;
 
-import 'package:calacirya/src/base_models/base_login_page_model.dart';
-import 'package:calacirya/src/base_models/base_welcome_page_model.dart';
-import 'package:calacirya/src/exceptions/calacirya_init_exception.dart';
-import 'package:calacirya/src/exceptions/login_exception.dart';
-import 'package:calacirya/src/extensions/navigation_manager_context_extension.dart';
-import 'package:calacirya/src/page/login_example/login_example.dart';
-import 'package:calacirya/src/page/welcome_example/welcome_example.dart';
-import 'package:calacirya/src/shared_keys.dart';
+import 'package:calacirya/base_models/base_login_page_model.dart';
+import 'package:calacirya/base_models/base_welcome_page_model.dart';
+import 'package:calacirya/exceptions/calacirya_init_exception.dart';
+import 'package:calacirya/exceptions/login_exception.dart';
+import 'package:calacirya/extensions/navigation_manager_context_extension.dart';
+import 'package:calacirya/page/login_example/login_example.dart';
+import 'package:calacirya/page/welcome_example/welcome_example.dart';
+import 'package:calacirya/shared_keys.dart';
 import 'package:flutter/material.dart';
 import 'package:mazarbul/mazarbul.dart';
 

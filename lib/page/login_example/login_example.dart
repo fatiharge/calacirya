@@ -8,8 +8,8 @@
  *
  */
 
-import 'package:calacirya/src/base_models/base_login_page_model.dart';
-import 'package:calacirya/src/exceptions/login_exception.dart';
+import 'package:calacirya/base_models/base_login_page_model.dart';
+import 'package:calacirya/exceptions/login_exception.dart';
 import 'package:flutter/material.dart';
 
 class LoginExample extends BaseLoginPageModel {

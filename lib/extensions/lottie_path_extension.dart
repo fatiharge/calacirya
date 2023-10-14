@@ -8,7 +8,7 @@
  *
  */
 
-import 'package:calacirya/src/enums/lottie_path.dart';
+import 'package:calacirya/enums/lottie_path.dart';
 
 /// Extension to convert [LottiePath] enum values to Lottie animation paths.
 extension LottiePathExtension on LottiePath {
