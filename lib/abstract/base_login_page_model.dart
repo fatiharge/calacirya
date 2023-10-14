@@ -9,7 +9,7 @@
  */
 
 import 'package:calacirya/calacirya.dart';
-import 'package:calacirya/exceptions/login_exception.dart';
+import 'package:calacirya/exception/login_exception.dart';
 import 'package:flutter/material.dart';
 
 abstract class BaseLoginPageModel extends StatefulWidget {

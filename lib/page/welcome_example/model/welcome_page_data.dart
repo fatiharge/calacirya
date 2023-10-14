@@ -8,11 +8,11 @@
  *
  */
 
-import 'package:calacirya/enums/asset_type.dart';
-import 'package:calacirya/enums/image_path.dart';
-import 'package:calacirya/enums/lottie_path.dart';
-import 'package:calacirya/extensions/image_path_extension.dart';
-import 'package:calacirya/extensions/lottie_path_extension.dart';
+import 'package:calacirya/enum/asset_type.dart';
+import 'package:calacirya/enum/image_path.dart';
+import 'package:calacirya/enum/lottie_path.dart';
+import 'package:calacirya/extension/image_path_extension.dart';
+import 'package:calacirya/extension/lottie_path_extension.dart';
 
 /// Represents data for a welcome page in the application.
 class WelcomePageData {
@@ -86,13 +86,13 @@ class WelcomePageData {
   static const String _lastStepText = 'Here is the final step!';
 
   static List<WelcomePageData> dummyList = [
-    WelcomePageData.fromCalaciryaLottie(_welcomeText, LottiePath.lottie2),
-    WelcomePageData.fromCalaciryaLottie(_secondScreenText, LottiePath.lottie10),
-    WelcomePageData.fromCalaciryaLottie(_preparedText, LottiePath.lottie3),
-    WelcomePageData.fromCalaciryaLottie(_wishingTimeText, LottiePath.lottie5),
-    WelcomePageData.fromCalaciryaLottie(_wonderfulExperienceText, LottiePath.lottie7),
-    WelcomePageData.fromCalaciryaLottie(_readyForJourneyText, LottiePath.lottie8),
-    WelcomePageData.fromCalaciryaLottie(_journeyForYouText, LottiePath.lottie9),
-    WelcomePageData.fromCalaciryaLottie(_lastStepText, LottiePath.lottie6),
+    WelcomePageData.fromCalaciryaLottie(_welcomeText, LottiePath.lottieWelcomeText),
+    WelcomePageData.fromCalaciryaLottie(_secondScreenText, LottiePath.lottieSecondScreenText),
+    WelcomePageData.fromCalaciryaLottie(_preparedText, LottiePath.lottiePreparedText),
+    WelcomePageData.fromCalaciryaLottie(_wishingTimeText, LottiePath.lottieWishingTimeText),
+    WelcomePageData.fromCalaciryaLottie(_wonderfulExperienceText, LottiePath.lottieWonderfulExperienceText),
+    WelcomePageData.fromCalaciryaLottie(_readyForJourneyText, LottiePath.lottieReadyForJourneyText),
+    WelcomePageData.fromCalaciryaLottie(_journeyForYouText, LottiePath.lottieJourneyForYouText),
+    WelcomePageData.fromCalaciryaLottie(_lastStepText, LottiePath.lottieLastStepText),
   ];
 }

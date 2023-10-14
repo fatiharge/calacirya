@@ -8,8 +8,8 @@
  *
  */
 
-import 'package:calacirya/base_models/base_welcome_page_model.dart';
-import 'package:calacirya/enums/asset_type.dart';
+import 'package:calacirya/abstract/base_welcome_page_model.dart';
+import 'package:calacirya/enum/asset_type.dart';
 import 'package:calacirya/page/welcome_example/model/welcome_page_data.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';

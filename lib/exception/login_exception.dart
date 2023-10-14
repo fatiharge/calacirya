@@ -60,8 +60,8 @@ class LoginException implements Exception {
   }
 }
 
-/// Enum representing different types of login exceptions.
-/// Enum representing different types of login exceptions.
+/// Enum representing different types of login exception.
+/// Enum representing different types of login exception.
 enum LoginExceptionType {
   /// Represents an invalid password error.
   password,
