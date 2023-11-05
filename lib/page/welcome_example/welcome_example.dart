@@ -121,7 +121,8 @@ class _WelcomeExampleState extends State<WelcomeExample> {
     Widget textWidget = Center(
       child: Text(
         item.title,
-        style: TextStyle(fontSize: Theme.of(context).textTheme.bodyLarge?.fontSize),
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: Theme.of(context).textTheme.titleLarge?.fontSize),
       ),
     );
 
