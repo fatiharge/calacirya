@@ -187,10 +187,10 @@ packages:
     dependency: transitive
     description:
       name: mazarbul
-      sha256: e3302649834ea85cf4863b732c01bdb4acf2b1db7b229a9ca3be4a12098d5552
+      sha256: b55fab1962d589ffa6b896af435208cfe1fba7aaa0eddcef7d2861831cae441a
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.9"
+    version: "1.1.0"
   meta:
     dependency: transitive
     description:
