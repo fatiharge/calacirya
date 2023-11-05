@@ -17,6 +17,6 @@ extension LottiePathExtension on LottiePath {
   /// The animation path is constructed by converting the enum name to lowercase
   /// and appending ".json" to it.
   String get toPath {
-    return 'assets/${name.toLowerCase()}.json';
+    return 'assets/$name.json';
   }
 }
